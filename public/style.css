@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+h1, p, div {
+  margin: 0;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+.dot-game-header-container {
+  height: 200px;
+  font-family: 'Pacifico', cursive;
+  padding: 0 25px;
+  box-shadow: 1px 2px 11px 1px grey;
+  z-index: 999999 !important;
+  position: absolute;
+  width: 100%;
+  background: white;
+}
+.dot-game-score {
+  font-size: 60px;
+}
+.dot-game-score-fire {
+  position: absolute;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  -webkit-transition: opacity 0.5s ease-in-out, top 3s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out, top 3s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out, top 3s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out, top 3s ease-in-out;
+  transition: opacity 0.5s ease-in-out, top 3s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+}
+.dot-game-show-points {
+  opacity: 1;
+  top: 0 !important
+}
+.dot-game-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 25px;
+  background: black;
+  cursor: pointer;
+}
+.dot-game-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 75%;
+  height: 25px;
+  height: 3px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.dot-game-ball {
+  position: absolute;
+  z-index: 1;
+}
+@media only screen and (max-width: 450px) {
+  .dot-game-slider::-webkit-slider-thumb {
+    width: 25px !important;
+    border-radius: 12.5px;
+  }
+  .dot-game-speed-text {
+    font-size: 20px !important;
+  }
+}
